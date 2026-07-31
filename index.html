@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveAI - Premium Car Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <i data-lucide="sparkles"></i> DriveAI <span>Beta</span>
+    </h1>
+    <nav>
+      <a href="index.html" class="active"><i data-lucide="layout-dashboard" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> Home</a>
+      <a href="compare.html"><i data-lucide="git-compare" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> Compare</a>
+      <a href="chat.html"><i data-lucide="message-square" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> AI Chat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Find, Compare & Chat About <span>Dream Cars</span></h2>
+      <p>Explore technical specifications, compare models head-to-head, or consult our AI Auto Expert for personalized advice.</p>
+      
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search by brand, name, or engine specs...">
+        <button id="search-btn">
+          <i data-lucide="search"></i> Search
+        </button>
+      </div>
+    </section>
+
+    <div class="tags-container" id="category-filters">
+      <button class="tag-btn active" data-category="All">All Vehicles</button>
+      <button class="tag-btn" data-category="Electric">Electric</button>
+      <button class="tag-btn" data-category="SUV">SUV</button>
+      <button class="tag-btn" data-category="Sports">Sports</button>
+      <button class="tag-btn" data-category="Sedan">Sedan</button>
+      <button class="tag-btn" data-category="Truck">Trucks</button>
+    </div>
+
+    <section class="cards-section">
+      <div class="cards" id="cars-grid">
+        <!-- Dynmically loaded from API -->
+        <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-secondary);">
+          <i data-lucide="loader-2" class="animate-spin" style="width: 32px; height: 32px; margin-bottom: 12px; color: var(--accent-cyan);"></i>
+          <p>Booting up car specifications database...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 DriveAI Auto Consultant. Powered by Groq LLM API.</p>
+  </footer>
+
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Logic -->
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize lucide icons
+      lucide.createIcons();
+      // Initialize Dashboard page specific elements
+      if (typeof initDashboard === "function") {
+        initDashboard();
+      }
+    });
+  </script>
+</body>
+</html>

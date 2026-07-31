@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveAI - Automotive AI Consultant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <i data-lucide="sparkles"></i> DriveAI <span>Beta</span>
+    </h1>
+    <nav>
+      <a href="index.html"><i data-lucide="layout-dashboard" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> Home</a>
+      <a href="compare.html"><i data-lucide="git-compare" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> Compare</a>
+      <a href="chat.html" class="active"><i data-lucide="message-square" style="width:16px; height:16px; vertical-align:text-bottom; margin-right:4px;"></i> AI Chat</a>
+    </nav>
+  </header>
+
+  <main class="chat-container">
+    <!-- Sidebar: Prompt shortcuts -->
+    <aside class="chat-sidebar">
+      <div class="sidebar-title">
+        <i data-lucide="help-circle" style="color: var(--accent-cyan);"></i> Quick Starters
+      </div>
+      <div class="sidebar-prompts" id="suggested-prompts">
+        <button class="prompt-chip" data-prompt="Show me electric SUVs under 70 Lakhs">
+          "Show me electric SUVs under 70 Lakhs"
+        </button>
+        <button class="prompt-chip" data-prompt="Compare Mustang GT vs 911 Carrera">
+          "Compare Mustang GT vs 911 Carrera"
+        </button>
+        <button class="prompt-chip" data-prompt="Calculate loan for Toyota Camry">
+          "Calculate loan for Toyota Camry"
+        </button>
+        <button class="prompt-chip" data-prompt="Recommend some high-performance sports cars">
+          "Recommend high-performance sports cars"
+        </button>
+        <button class="prompt-chip" data-prompt="What are the pros and cons of Ioniq 5?">
+          "What are the pros and cons of Hyundai Ioniq 5?"
+        </button>
+      </div>
+      <div class="sidebar-footer">
+        Ask about specs, comparisons, or EMIs!
+      </div>
+    </aside>
+
+    <!-- Main Chat Arena -->
+    <section class="chat-main">
+      <div class="chat-header">
+        <div class="bot-info">
+          <div class="bot-avatar">
+            <i data-lucide="bot"></i>
+          </div>
+          <div class="bot-meta">
+            <h3>DriveAI Assistant</h3>
+            <div class="bot-status">Online</div>
+          </div>
+        </div>
+        <button class="secondary" id="clear-chat-btn" title="Clear Chat History">
+          <i data-lucide="trash-2"></i> Clear
+        </button>
+      </div>
+
+      <div class="chat-history" id="chat-window">
+        <!-- Initial Message -->
+        <div class="message bot">
+          <div class="message-bubble">
+            <h3>Welcome to DriveAI Auto Advisor!</h3>
+            I am your dedicated premium car assistant, powered by the Groq API. 
+            I can help you:
+            <ul>
+              <li><strong>Recommend</strong> cars matching your budget and lifestyle preferences.</li>
+              <li>Perform side-by-side technical <strong>comparisons</strong> of any vehicles.</li>
+              <li>Estimate monthly <strong>EMI payments</strong> with our interactive loan widgets.</li>
+            </ul>
+            What car or feature are we looking at today?
+          </div>
+          <div class="message-time">10:00 AM</div>
+        </div>
+      </div>
+
+      <div class="chat-input-bar">
+        <input type="text" id="chat-input" placeholder="Type a message or select a prompt on the left..." autocomplete="off">
+        <button id="chat-send-btn">
+          <span>Send</span> <i data-lucide="send"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 DriveAI Auto Consultant. Powered by Groq LLM API.</p>
+  </footer>
+
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Logic -->
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize lucide icons
+      lucide.createIcons();
+      // Initialize Chat page specific elements
+      if (typeof initChat === "function") {
+        initChat();
+      }
+    });
+  </script>
+</body>
+</html>
