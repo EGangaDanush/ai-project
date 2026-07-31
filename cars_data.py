@@ -13,7 +13,7 @@ cars = [
     "topSpeed": "217 km/h",
     "pros": ["Spacious interior", "Leading charging network", "Excellent autopilot features"],
     "cons": ["Stiff ride quality", "No physical buttons", "Build quality inconsistency"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "hyundai-ioniq-5",
@@ -29,7 +29,7 @@ cars = [
     "topSpeed": "185 km/h",
     "pros": ["Stunning retro-futuristic design", "Ultra-fast 800V charging", "Spacious and comfortable cabin"],
     "cons": ["Rear visibility is limited", "Small front trunk", "Basic lane keeping can be intrusive"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1669012591605-e1d900b73df7?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "bmw-x5",
@@ -45,7 +45,7 @@ cars = [
     "topSpeed": "243 km/h",
     "pros": ["Powerful engine options", "Ultra-luxurious interior", "Engaging driving dynamics"],
     "cons": ["Cramped third-row option", "Expensive options packages", "Complicated infotainment layout"],
-    "image_url": "/assets/suv.jpg"
+    "image_url": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "audi-a6",
@@ -61,7 +61,7 @@ cars = [
     "topSpeed": "250 km/h",
     "pros": ["Extremely quiet cabin", "High-tech dual touchscreen UI", "Superb ride comfort"],
     "cons": ["Understated design looks dated", "Numb steering feedback", "Trunk space is average"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "porsche-911",
@@ -77,7 +77,7 @@ cars = [
     "topSpeed": "293 km/h",
     "pros": ["Flawless handling and steering", "Everyday supercar comfort", "Iconic styling and legacy"],
     "cons": ["Virtually useless rear seats", "Astronomical options pricing", "Minimal cabin storage space"],
-    "image_url": "/assets/sports.jpg"
+    "image_url": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "ford-mustang",
@@ -90,10 +90,10 @@ cars = [
     "horsepower": 480,
     "efficiency_range": "8 km/l mileage",
     "acceleration": "4.2s (0-100 km/h)",
-    "topSpeed: ": "250 km/h",
+    "topSpeed": "250 km/h",
     "pros": ["Glorious V8 exhaust rumble", "Aggressive muscle styling", "Great value-to-performance"],
     "cons": ["Heavy steering in tight corners", "Subpar fuel economy", "Cheap interior plastics in lower trims"],
-    "image_url": "/assets/sports.jpg"
+    "image_url": "https://images.unsplash.com/photo-1611245801755-734be013c7a2?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "toyota-camry",
@@ -109,14 +109,14 @@ cars = [
     "topSpeed": "180 km/h",
     "pros": ["Unbeatable fuel efficiency", "Legendary reliability", "Extremely smooth ride"],
     "cons": ["Boring driving dynamics", "Outdated infotainment graphics", "Loud CVT engine drone under heavy acceleration"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1621007947382-cc34a6256c64?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "honda-civic",
     "name": "Civic",
     "brand": "Honda",
     "type": "Sedan",
-    "numericPrice: ": 2500000,
+    "numericPrice": 2500000,
     "price": "₹25,00,000",
     "engine_battery": "1.5L Turbocharged I4",
     "horsepower": 178,
@@ -125,7 +125,7 @@ cars = [
     "topSpeed": "200 km/h",
     "pros": ["Upscale cabin design", "Agile and fun handling", "Excellent resale value"],
     "cons": ["Noisy at highway speeds", "No physical volume knob on passenger side", "Low driving position might annoy some"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "mercedes-gle",
@@ -141,7 +141,7 @@ cars = [
     "topSpeed": "250 km/h",
     "pros": ["State-of-the-art MBUX screen", "Unmatched suspension luxury", "Extremely quiet drive"],
     "cons": ["Very expensive upkeep", "Touch controls can be frustrating", "Third-row space is tight"],
-    "image_url": "/assets/suv.jpg"
+    "image_url": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "jeep-wrangler",
@@ -157,7 +157,7 @@ cars = [
     "topSpeed": "177 km/h",
     "pros": ["Unmatched off-road capability", "Removable doors and roof", "Rugged, classic look"],
     "cons": ["Noisy on the highway", "Rough and bumpy ride", "Poor fuel economy"],
-    "image_url": "/assets/suv.jpg"
+    "image_url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "toyota-rav4",
@@ -173,7 +173,7 @@ cars = [
     "topSpeed": "190 km/h",
     "pros": ["Generous cargo capacity", "User-friendly dashboard", "Standard driver safety aids"],
     "cons": ["Engine sounds coarse when pushed", "Basic passenger seat adjustment", "Uninspired styling"],
-    "image_url": "/assets/suv.jpg"
+    "image_url": "https://images.unsplash.com/photo-1606225457115-9b0de873c5db?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "porsche-taycan",
@@ -189,7 +189,7 @@ cars = [
     "topSpeed": "230 km/h",
     "pros": ["Incredible Porsche driving feel", "Futuristic multi-screen interior", "Blazing-fast charging rates"],
     "cons": ["Cramped rear seats", "Real-world range is average", "Extremely high base price"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1611245801217-062e74de0555?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "lexus-es",
@@ -205,7 +205,7 @@ cars = [
     "topSpeed": "180 km/h",
     "pros": ["Silky smooth ride quality", "Whisper-quiet cruising cabin", "Bulletproof reliability stats"],
     "cons": ["Suggish acceleration response", "Infotainment trackpad is finicky", "Rear seatbacks do not fold"],
-    "image_url": "/assets/electric.jpg"
+    "image_url": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "ford-f150",
@@ -221,7 +221,7 @@ cars = [
     "topSpeed": "180 km/h",
     "pros": ["Massive front trunk (Frunk)", "Power outlets feed appliances", "Tows heavy loads easily"],
     "cons": ["Towing cuts range in half", "Enormous dimensions make parking hard", "Long charging times on Level 2"],
-    "image_url": "/assets/truck.jpg"
+    "image_url": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "rivian-r1t",
@@ -237,6 +237,6 @@ cars = [
     "topSpeed": "180 km/h",
     "pros": ["Sports-car acceleration times", "Unrivaled gear tunnel storage", "Incredible off-road mode adjustments"],
     "cons": ["No Apple CarPlay / Android Auto", "Wind noise from boxy side mirrors", "Expensive to repair body panels"],
-    "image_url": "/assets/truck.jpg"
+    "image_url": "https://images.unsplash.com/photo-1669076214553-6ef72e0a294b?auto=format&fit=crop&w=600&q=80"
   }
 ]
