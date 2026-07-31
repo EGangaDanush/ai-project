@@ -17,6 +17,20 @@ CORS(app)
 def get_local_fallback_response(message):
     msg = message.lower()
     
+    # Define keywords for domain restriction
+    route_keywords = ["route", "road trip", "direction", "map", "distance from", "how to reach", "drive from", "drive to", "navigate", "city", "cities", "town", "weather", "hotel", "flight", "tourism", "code", "recipe", "joke", "history", "capital", "president"]
+    auto_words = ["car", "suv", "sedan", "truck", "vehicle", "driveai", "mileage", "specs", "price", "emi", "loan", "horsepower", "model", "range", "hybrid", "electric", "ev", "battery", "carrera", "mustang", "rubicon", "ioniq", "taycan", "tesla", "audi", "bmw", "mercedes", "porsche", "ford", "hyundai", "toyota", "jeep", "honda", "lexus", "rivian"]
+    
+    is_off_topic = any(k in msg for k in route_keywords)
+    has_car_context = any(w in msg for w in auto_words)
+    
+    # Strict off-topic redirection check
+    if (is_off_topic and not has_car_context) or (not has_car_context and not any(k in msg for k in ["compare", "vs", "loan", "emi", "calculate", "recommend", "suggest", "best", "buy"])):
+        return {
+            "reply": "### Automotive Focus Only\nI apologize, but I am specifically designed to assist with **cars, technical specifications, model comparisons, and auto loan calculations**. I cannot help with cities, travel route planning, navigation, coding, or other off-topic general knowledge queries.\n\nLet me know if you would like me to suggest an electric vehicle, compare some sports cars, or calculate an auto loan for you!",
+            "widget": None
+        }
+    
     # 1. Comparison Intent
     if "compare" in msg or " vs " in msg:
         found_cars = [c for c in cars if c['name'].lower() in msg or c['brand'].lower() in msg]
@@ -190,7 +204,14 @@ Instructions for responses:
 - If the user asks about loans, EMI, calculations, monthly payments, or finance options for a specific car, set widget "type" to "loan", and provide the carId, name, and numericPrice.
 
 3. Keep your tone elegant, professional, highly informative, and enthusiastic about cars.
-4. Output ONLY the raw JSON block. Do not wrap in markdown code blocks. Just output the JSON starting with {{ and ending with }}."""
+4. Output ONLY the raw JSON block. Do not wrap in markdown code blocks. Just output the JSON starting with {{ and ending with }}.
+
+5. STRICT DOMAIN RESTRICTION: You are strictly limited to answering questions related to cars, specifications, model comparisons, automotive advice, and auto financing/loans. You must NOT answer questions about route planning, navigation, cities, travel distance, travel recommendations, weather, recipes, coding, or any general topics unrelated to cars.
+If the user asks about an off-topic subject (such as routing, city guides, general knowledge, coding, etc.), you MUST decline politely but firmly. For example:
+{{
+  "reply": "I apologize, but I am strictly trained to provide information about cars, specifications, model comparisons, and auto financing. I cannot assist with cities, route planning, coding, or other non-automotive queries. Let me know if you would like me to suggest a car or calculate a loan payment!",
+  "widget": null
+}}"""
 
         messages = [
             {"role": "system", "content": system_prompt}
